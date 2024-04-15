@@ -1,0 +1,2 @@
+ng new frontend --directory=./ --no-standalone
+ng add @angular/material
