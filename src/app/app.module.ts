@@ -19,6 +19,8 @@ import { PayementsComponent } from './payements/payements.component';
 import { StudentsComponent } from './students/students.component';
 import {MatCard, MatCardModule} from "@angular/material/card";
 import {MatDivider, MatDividerModule} from "@angular/material/divider";
+import { LoadStudentsComponent } from './load-students/load-students.component';
+import { LoadPaymentsComponent } from './load-payments/load-payments.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import {MatDivider, MatDividerModule} from "@angular/material/divider";
     LoginComponent,
     DashboardComponent,
     PayementsComponent,
-    StudentsComponent
+    StudentsComponent,
+    LoadStudentsComponent,
+    LoadPaymentsComponent
   ],
   imports: [
     BrowserModule,
