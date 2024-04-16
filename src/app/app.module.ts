@@ -17,6 +17,8 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PayementsComponent } from './payements/payements.component';
 import { StudentsComponent } from './students/students.component';
+import {MatCard, MatCardModule} from "@angular/material/card";
+import {MatDivider, MatDividerModule} from "@angular/material/divider";
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { StudentsComponent } from './students/students.component';
     MatMenuModule,
     MatSidenavModule,
     MatNavList,
-    MatListItem
+    MatListItem,
+    MatCardModule,
+    MatDividerModule
 
   ],
   providers: [
