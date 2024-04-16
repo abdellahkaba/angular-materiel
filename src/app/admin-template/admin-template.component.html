@@ -13,7 +13,10 @@
     <button routerLink="/admin/loadStudents" mat-menu-item>Load Students</button>
     <button routerLink="/admin/loadPayements" mat-menu-item>Load Students</button>
   </mat-menu>
-  <button routerLink="/login" mat-raised-button color="accent">Login</button>
+  <button mat-button *ngIf="authService.authenticated">
+    {{authService.username}}
+  </button>
+  <button (click)="logout()" mat-raised-button color="accent">Logout</button>
 </mat-toolbar>
 
 <mat-drawer-container>
