@@ -1,2 +1,8 @@
 ng new frontend --directory=./ --no-standalone
 ng add @angular/material
+
+Les composants
+ng g c admin-template
+ng g c home
+ng g c profile
+ng g c login
