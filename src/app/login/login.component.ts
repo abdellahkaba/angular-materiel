@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {AuthenticationService} from "../services/authentication.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,10 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 })
 export class LoginComponent implements  OnInit{
   public loginFormGroup ! : FormGroup
-  constructor(private fb : FormBuilder) {
+  constructor(private fb : FormBuilder,
+              private authService : AuthenticationService,
+              private router : Router
+  ) {
   }
   ngOnInit(): void {
     this.loginFormGroup = this.fb.group({
@@ -20,6 +25,11 @@ export class LoginComponent implements  OnInit{
   login() {
     let username = this.loginFormGroup.value.username
     let password = this.loginFormGroup.value.password
-    console.log(username,password)
+    let auth = this.authService.login(username,password)
+    // @ts-ignore
+    if (auth == true)
+    {
+      this.router.navigateByUrl("/admin")
+    }
   }
 }
