@@ -24,6 +24,8 @@ import { LoadPaymentsComponent } from './load-payments/load-payments.component';
 import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatInput, MatInputModule} from "@angular/material/input";
+import {AuthGuard} from "./guards/auth.guard";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -52,11 +54,12 @@ import {MatInput, MatInputModule} from "@angular/material/input";
     MatDividerModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    BrowserAnimationsModule
 
   ],
   providers: [
-    provideAnimationsAsync()
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
