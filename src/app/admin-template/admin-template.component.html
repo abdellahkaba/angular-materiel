@@ -2,7 +2,7 @@
   <button mat-icon-button (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span class="spacer"></span>
+  <span style="flex: auto"></span>
   <button mat-button routerLink="/admin/home">Home</button>
   <button mat-button routerLink="/admin/profile">Profile</button>
   <button *ngIf="authService.roles.includes('ADMIN')" mat-button [matMenuTriggerFor]="importMenu">
