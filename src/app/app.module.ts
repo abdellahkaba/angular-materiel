@@ -21,6 +21,9 @@ import {MatCard, MatCardModule} from "@angular/material/card";
 import {MatDivider, MatDividerModule} from "@angular/material/divider";
 import { LoadStudentsComponent } from './load-students/load-students.component';
 import { LoadPaymentsComponent } from './load-payments/load-payments.component';
+import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatInput, MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { LoadPaymentsComponent } from './load-payments/load-payments.component';
     MatNavList,
     MatListItem,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule
 
   ],
   providers: [
