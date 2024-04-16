@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button>
+  <button mat-icon-button (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
     <span class="spacer"></span>
@@ -15,3 +15,24 @@
     </mat-menu>
   <button mat-raised-button color="accent">Login</button>
 </mat-toolbar>
+
+<mat-drawer-container>
+  <mat-drawer #drawer mode="side" position="start" opened="true">
+    <mat-nav-list>
+      <mat-list-item>
+        <button mat-button>Dashboard</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button>Student</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button>Payements</button>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="min-height: 600px">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

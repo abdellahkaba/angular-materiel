@@ -9,6 +9,8 @@ import {MatToolbar, MatToolbarModule} from "@angular/material/toolbar";
 import {MatButton, MatButtonModule} from "@angular/material/button";
 import {MatIcon, MatIconModule} from "@angular/material/icon";
 import {MatMenu, MatMenuItem, MatMenuModule, MatMenuTrigger} from "@angular/material/menu";
+import {MatDrawerContainer, MatSidenavModule} from "@angular/material/sidenav";
+import {MatListItem, MatNavList} from "@angular/material/list";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import {MatMenu, MatMenuItem, MatMenuModule, MatMenuTrigger} from "@angular/mate
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
-    MatMenuTrigger,
+    MatSidenavModule,
+    MatNavList,
+    MatListItem
+
   ],
   providers: [
     provideAnimationsAsync()
