@@ -11,6 +11,8 @@ export class AdminTemplateComponent implements OnInit{
   constructor(public authService : AuthenticationService) {
   }
   ngOnInit(): void {
+    // TODO document why this method 'ngOnInit' is empty
+
   }
 
   logout() {

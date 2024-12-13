@@ -27,6 +27,16 @@ import {MatInput, MatInputModule} from "@angular/material/input";
 import {AuthGuard} from "./guards/auth.guard";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AuthorizationGuard} from "./guards/authorization.guard";
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef,
+  MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
+  MatTable
+} from "@angular/material/table";
+import {MatPaginator} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -56,7 +66,18 @@ import {AuthorizationGuard} from "./guards/authorization.guard";
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTable,
+    MatColumnDef,
+    MatHeaderCell,
+    MatCell,
+    MatHeaderCellDef,
+    MatCellDef,
+    MatHeaderRow,
+    MatRow,
+    MatHeaderRowDef,
+    MatRowDef,
+    MatPaginator
 
   ],
   providers: [
