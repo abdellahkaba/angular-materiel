@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
+import {MatSort} from "@angular/material/sort";
 
 @Component({
   selector: 'app-students',
@@ -13,6 +14,7 @@ export class StudentsComponent implements OnInit, AfterViewInit {
   public dataSource : any
   public displayedColumns : string[] = ['id', 'firstName', 'lastName', 'email','payment']
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
   constructor() {
   }
 
@@ -32,6 +34,12 @@ export class StudentsComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
+
+  filterStudents(event: Event) {
+    let value = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = value.toString();
+  }
 }

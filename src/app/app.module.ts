@@ -37,6 +37,7 @@ import {
   MatTable
 } from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
+import {MatSort, MatSortHeader} from "@angular/material/sort";
 
 @NgModule({
   declarations: [
@@ -77,7 +78,10 @@ import {MatPaginator} from "@angular/material/paginator";
     MatRow,
     MatHeaderRowDef,
     MatRowDef,
-    MatPaginator
+    MatPaginator,
+    MatSort,
+    MatSortHeader,
+    MatFormFieldModule
 
   ],
   providers: [
